@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BNB Payment</title>
+</head>
+
+<body  class="bg-[#FFFFFF]" class="flex justify-center items-center">
+ <div class="mt-[200px] flex flex-col  justify-start items-center w-[500px] h-[500px] border border-gray-100">
+<div class="flex items-center justify-between w-[500px] p-4 bg-white border rounded shadow-md" id="main-content">
+    <div class="text-left font-[600] text-[18px]">
+        Send Payment
+    </div>
+    <div class="text-xl font-bold" id="timer">
+        01:00:00
+    </div>
+    <button class="px-4 py-2 ml-4 text-white bg-blue-500 rounded hover:bg-blue-700" onclick="showConfirmation()">Go Back</button>
+</div>
+
+<div id="confirmation-content" class="hidden flex items-center justify-between w-[500px] p-4 bg-white border rounded shadow-md">
+    <p class="text-lg">Are you sure?</p>
+    <div class="flex">
+        <button class="px-4 py-2 mr-2 text-white bg-red-500 rounded hover:bg-red-700" onclick="goBack()">Yes</button>
+        <button class="px-4 py-2 text-white bg-gray-500 rounded hover:bg-gray-700" onclick="hideConfirmation()">No</button>
+    </div>
+</div>
+<div class="flex flex-row justify-between mt-5 mx-0.5">
+  <img src="./assets/qrcode.jpg" class="h-[150px] w-[150px]" alt="">
+  <div class="flex flex-row justify-center items-center ml-14">
+    <img src="./assets/icon-bnb.svg" class="h-[40px] w-[30px]" alt="">
+    <h1  class="text-[18px] font-[400] ml-3">Only send BNB to this address</h1>
+
+  </div>
+</div>
+<div class="flex flex-row justify-between mt-5 mx-0.5">
+ <div class="flex flex-col justify-center mr-20 items-center ">
+    <p class="text-[14px]"> BNB Address  </p>
+    <h1 class="text-[16px] font-[400] " id="header-text"> <b> 0xa8db4db23c6582435132d1f6f1c25b4b3e4fec9d</b></h1>
+ </div>
+ <button class="copy-button ml-15" onclick="copyText()">
+ <img src="./assets/copy.svg" class="h-[20px] w-[20px]" alt="">
+
+</button>
+
+
+</div>
+<div>
+
+</div>
+
+</div>
+<script>
+    function startTimer(duration, display) {
+        let timer = duration, hours, minutes, seconds;
+        setInterval(function () {
+            hours = parseInt(timer / 3600, 10);
+            minutes = parseInt((timer % 3600) / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        let oneHour = 60 * 60, // 1 hour in seconds
+            display = document.getElementById('timer');
+        startTimer(oneHour, display);
+    };
+
+    function showConfirmation() {
+        document.getElementById('main-content').classList.add('hidden');
+        document.getElementById('confirmation-content').classList.remove('hidden');
+    }
+
+    function hideConfirmation() {
+        document.getElementById('main-content').classList.remove('hidden');
+        document.getElementById('confirmation-content').classList.add('hidden');
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</script>
+<script>
+    function copyText() {
+        // Get the text from the header
+        const textToCopy = document.getElementById('header-text').innerText;
+        
+        // Create a temporary input element to hold the text
+        const tempInput = document.createElement('input');
+        tempInput.value = textToCopy;
+        document.body.appendChild(tempInput);
+        
+        // Select the text and copy it to the clipboard
+        tempInput.select();
+        document.execCommand('copy');
+        
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+
+        // Alert the user (optional)
+        alert('Text copied to clipboard');
+    }
+</script>
+</body>
+</html>

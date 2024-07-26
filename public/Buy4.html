@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Payment Methods</title>
+  </head>
+  <body class="bg-[#FFFFFF]">
+    <h1 class="text-[34px] mt-[100px] text-blue-700 font-[700] text-center">
+      Coinbase
+    </h1>
+    <div class="flex flex-col justify-center items-center">
+      <div
+        class="h-[900px] w-[500px] border border-gray-300 mt-5 flex flex-col mx-10 p-6 justify-center items-center"
+      >
+        
+      <h1 class=t>
+        <center> <b> <h1>Four Blockchains</h1> </b> <br> 
+ After the payment is completed, the download link and license will be show and then you can choose your blockchains! BTC, LTC or...
+</center> </h1>
+       
+        <h1 class="text-[18px] text-cyan-600 mt-[40px] font-[700]">
+          Please provide the required information
+        </h1>
+        <p class="text-[17px] font-[700] mt-15">USD $180</p>
+        <p class="text-[17px] font-[700] mt-15">Information</p>
+        <div class="form-container">
+      
+
+         
+          <form
+
+          class="border border-gray-600 mt-[20px] h-[25px] rounded-md w-[400px] flex  items-center justify-between"
+          id="myForm "
+        >
+    
+        <label class="font-[500] ml-10 text-[20px]" for="userInput"
+            >Name:</label
+          >
+          <input
+            class="border border-red-500 h-[25px] w-[300px] flex flex-row ml-10 justify-center items-center p-[10px]"
+            type="text"
+            id="input1"
+            name="userInput"
+            required
+          />
+          </form>
+
+
+          <form
+
+          class="border border-gray-600 mt-[20px] h-[25px] rounded-md w-[400px] flex  items-center justify-between"
+          id="myForm "
+        >
+    
+        <label class="font-[500] ml-10 text-[20px]" for="userInput"
+            >Email</label
+          >
+          <input
+            class="border border-red-500 h-[25px] w-[300px] flex flex-row ml-10 justify-center items-center p-[10px]"
+            type="text"
+            id="input2"
+            name="userInput"
+            required
+          />
+          </form>
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div1"
+            onclick="redirectToPage(2)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/logo-bitcoin.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">Bitcoin</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">BTC</h1>
+          </div>
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div2"
+            onclick="redirectToPage(1)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-bnb.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">BNB</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">BEP20</h1>
+          </div>
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div3"
+            onclick="redirectToPage(3)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-eth.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">Ethereum</h1>
+            </div>
+           <h1 class="text-[10px] font-[400] ">ETH</h1>
+          </div>
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div4"
+            onclick="redirectToPage(4)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-ltc.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">Litecoin</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">LTC</h1>
+          </div>
+
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div5"
+            onclick="redirectToPage(5)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-usdc.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">USDCoin</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">USDC</h1>
+          </div>
+
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div6"
+            onclick="redirectToPage(6)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-xrp.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">XRP</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">XRP</h1>
+          </div>
+
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div7"
+            onclick="redirectToPage(7)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/iconchainlink.svg"
+                class="h-[25px] w-[30px]"
+                alt=""                          
+              />
+              <h1 class="text-[18px] font-[400]">Chainlink</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">LINK</h1>
+          </div>
+
+          <div
+            class="navigation-div h-[25px] px-10 py-4 mt-5 rounded-3xl w-[400px] border border-cyan-500 bg-gray-100 cursor-pointer flex flex-row justify-between" id="div8"
+            onclick="redirectToPage(8)"
+          >
+            <div class="flex gap-2 justify-start items-center">
+              <img
+                src="./paymentslogo/icon-usdt.svg"
+                class="h-[25px] w-[30px]"
+                alt=""
+              />
+              <h1 class="text-[18px] font-[400]">USDT</h1>
+            </div>
+            <h1 class="text-[10px] font-[400] mb-[70px] py-[-60px]">TRC20</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+       function redirectToPage(pageNumber) {
+    var inputField1 = document.getElementById('input1').value;
+    var inputField2 = document.getElementById('input2').value;
+    
+    if (pageNumber >= 1 && pageNumber <= 4) {
+        if(inputField1 === "") {
+            alert("Please fill in the first input field.");
+            return;
+        }
+        window.location.href = `Pay${pageNumber}.html?input=${encodeURIComponent(inputField1)}`;
+    } else {
+        if(inputField2 === "") {
+            alert("Please fill in the second input field.");
+            return;
+        }
+        window.location.href = `Pay${pageNumber}.html?input=${encodeURIComponent(inputField2)}`;
+    }
+}
+    </script>
+  </body>
+</html>
